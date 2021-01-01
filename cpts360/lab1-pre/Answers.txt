@@ -1,0 +1,93 @@
+=========================  Part 1 =============================
+
+(A). For each case, use cc -m32 t.c to generate a.out. 
+     Then use  ls -l a.out to get a.out size.
+          run  size a.out  to get its section sizes.
+
+     Record the observed sizes in a table:
+
+          Case  | a.out |  TEXT  |  DATA  |  BSS   |
+        --------------------------------------------
+          (1)   | 15596 |  1679  |  304   |  8     |
+        --------------------------------------------  
+          (2)   | 15600 |  1679  |  308   |  4     |
+        --------------------------------------------
+          (3)   | 15596 |  1679  |  304   |  40032 |
+        --------------------------------------------
+          (4)   | 55620 |  1679  |  40328 |  4     |
+        --------------------------------------------
+          (5)   | 15680 |  1927  |  308   | 8      |  
+        --------------------------------------------        
+          (6)   | 15688 |  1695  |  304   | 40068  |
+        --------------------------------------------
+ 
+ /*******************************************************/
+            ANSWER THESE QUESTIONS:
+
+   1. Variables in C may be classified as
+
+          globals ---|--- UNINITIALIZED  globals;
+                     |---   INITIALIZED  globals;
+
+          locals  ---|--- AUTOMATIC locals;
+                     |--- STATIC    locals;
+
+   In terms of the above classification and the variables g, a, b, c, d,
+    notes: BSS is for UNINITIALIZED globals and UNINITIALIZED static locals
+
+      Case (1):
+      Which variables are in DATA? a, b, c
+      Which variables are in BSS ? g
+      Case (2):
+      Which variables are in DATA? g, a, b, c
+      Which variables are in BSS ? none
+      Case (3):
+      Which variables are in DATA? a, b, c
+      Which variables are in BSS ? g
+      Case (4):
+      Which variables are in DATA? g, a, b, c
+      Which variables are in BSS ? none
+      Case (5):
+      Which variables are in DATA? a, b, c, d
+      Which variables are in BSS ? g
+      Case (6):
+      Which variables are in DATA? none
+      Which variables are in BSS ? g, a, b, c, d
+
+   2. In terms of the TEXT, DATA and BSS sections,
+      Which sections are in a.out, which section is NOT in a.out?
+      
+      BSS is not in the a.out file. Only its size is recorded in the a.out file header.
+
+      WHY? BSS does not require any data because they are initialzed as 0 by the loader,
+            threfore no data in the executable.
+
+  (B). For each case, use   cc -m32 -static t.c   to generate a.out.
+       Record the sizes again and compare them with the sizes in (A).
+       
+       New Table:
+
+          Case  | a.out |
+        -------------------
+          (1)   | 704920 | 
+        -------------------
+          (2)   | 704920 |  
+        -------------------
+          (3)   | 704920 |  
+        -------------------
+          (4)   | 744952 |
+        -------------------
+          (5)   | 704920 |  
+        -------------------        
+          (6)   | 705012 |
+        -------------------
+       The sizes for the a.out files for the respective c files are much larger
+       compared to the previous part.
+
+       Static linking uses static library, the linker includes all the needed library function
+       code and data into a.out. This makes the a.out complete and self-contained but also very
+       large.
+
+=========================  Part 2 =============================
+
+In Part2 file

@@ -1,0 +1,15 @@
+enter main
+&argc=ffe18260 argv=ffe182f4 env=ffe18308
+&a=ffe1821c &b=ffe18220 &c=ffe18224
+VALUES OF argc, argv: 
+Value of argc: 4value of argv[1]: onevalue of argv[2]: twovalue of argv[3]: threeenter A
+&d=ffe181d0 &e=ffe181d4 &e=ffe181d8
+enter B
+&g=ffe181a4 &h=ffe181a0 &i=ffe181a8
+enter C
+&u=ffe18164 &v=ffe18168 &w=ffe1816c &i=&8x &p=ffe18170
+FP = ebp = ffe18188
+stack frame link list
+ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->ffe18174 ->exit B
+exit A
+exit main

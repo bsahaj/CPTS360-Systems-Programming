@@ -1,0 +1,3 @@
+./mkdisk
+gcc -Wall util.c level1.c cd_ls_pwd.c mkdir_creat.c rmdir.c link_unlink.c symlink.c open_close.c read_cat.c write_cp.c level2.c mount_unmount.c main.c
+./a.out disk3.1

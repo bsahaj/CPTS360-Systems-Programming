@@ -1,0 +1,70 @@
+Demo Record
+
+NAME: Sahaj Boggavaram ID: 11599184  
+
+1. Fill in NAMEs, IDs. Send to TA before 12-8-2020.
+2. DEMO with TA at scheduled time AND submit a ZIP file of YOUR project to TA
+3. Immediately after demo to TA, get on KCW's ZOOM session for Interview.
+
+4. Download disk1, disk2, disk3.1, disk3.2, dif2 from samples/PROJECT directory 
+
+LEVEL-1: Use disk1                                            55 %
+   COMMANDS                    EXPECTED RESULTS           OBSERVED & comments
+------------------      ------------------------------  ----------------------
+startup & menu:          start up, show commands menu   ______________________
+ls                       show contents of / directory   shows the a list of all contents in the working directory.
+
+mkdir /a ;     ls        show DIR /a exits; ls works    creates a new directory called a after ls, we can see that /a has been created.
+
+mkdir /a/b ;   ls /a     make dir with pathname         creates a new directory called b inside /a. ls, lists the contents of /a so we see b
+
+cd    /a/b ;   pwd       cd to a pathname, show CWD     changes working directory to /a/b and then pwd shows the present working directory which is inside b
+
+cd    ../../ ; pwd       cd upward, show CWD            since we were in /a/b, this command takes us back to root directory
+
+creat f1     ; ls        creat file, show f1 is a file  creates a new file called f1. there is no 'd' in the permissons 
+
+link  f1 f2;   ls        hard link, both linkCount=2    linked f1 and f2. and we can see that both f1 and f2 have 2 for link count
+
+unlink   f1;   ls        unlink f1; f2 linkCount=1      f1 gets removed and link count gets updated to 1
+
+symlink f2 f3; ls        symlink; ls show f3 -> f2      links f2 and f3, f3=>f2
+
+rmdir /a/b;    ls        rmdir and show results         removes /b but not /a
+  
+LEVEL-2: Use disk2: (file1,tiny,small,large,huge)             25 %
+------------------        ---------------------------   -----------------------
+cat large; cat huge       show contents to LAST LINE
+                           === END OF huge FILE ===    end of huge file
+
+cp  large newlarge; ls    show they are SAME size      it is copying but not same size
+
+cp  huge  newhuge ; ls    show they are SAME size     it is copying but not same size
+
+              MUST DO THIS: exit YOUR project; 
+(In Linux): dif2          MUST not show any lines     _________________________ 
+
+============ IF can not do cat, cp: TRY to do these for LEVEL2 ================
+open  small 0;   pfd      show fd=0 opened for R      opened for read
+
+read 0 20;       pfd      show 20 chars read          read 20 characters
+
+open file1 1;    pfd      show fd=1 opened for W      opened for write
+
+write 1 "abcde"; ls       show file1 size=5           wrote 5 chars_
+
+close 1; pfd              show fd=1 is closed         closed file1, and displayed small
+
+LEVEL-3: start with disk3.1;   MOUNT disk3.2                  20 %
+-------------------   ----------------------------  ----------------------------
+mount disk3.2 /mnt;       mount disk3.2 on /mnt      nothing
+
+ls /mnt                   contents of disk3.2        ___________________________
+
+cd /mnt/DIR1; pwd         show CWD is /mnt/DIR1      ___________________________
+
+mkdir ABC; ls             show ABC exits             ___________________________
+
+cd ../../;    pwd         show CWD=/                 ___________________________
+
+Switch to P1; rmdir dir1; unlink file1 : not owner   able to switch process and verified that P1 cannot delete P0's dir and file
